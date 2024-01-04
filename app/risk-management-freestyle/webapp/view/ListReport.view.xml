@@ -1,0 +1,12 @@
+<mvc:View controllerName="riskmanagementfreestyle.controller.ListReport" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+    xmlns:smartList="sap.ui.comp.smartlist">
+    <Page id="idPage" title="{i18n>title}">
+        <content>
+            <smartList:SmartList id="idRisksList" header="{i18n>risksListTitle}" entitySet="Risks" showRowCount="true" enableAutoBinding="true">
+				<smartList:listItemTemplate>
+					<StandardListItem title="{title}" info="{owner}" description="{descr}" />
+				</smartList:listItemTemplate>
+			</smartList:SmartList>
+        </content>
+    </Page>
+</mvc:View>
