@@ -6,6 +6,7 @@
   "license": "SAP SAMPLE CODE LICENSE",
   "repository": "https://github.com/SAP-samples/sap-learning-extension-suite",
   "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.11.12",
     "@sap-cloud-sdk/http-client": "3.9.0",
     "@sap/cds": "^7",
     "express": "^4"
@@ -25,6 +26,9 @@
         "kind": "odata-v2",
         "model": "srv/external/API_BUSINESS_PARTNER"
       }
+    },
+    "cov2ap" : {
+      "plugin" : true
     }
   },
   "sapux": [
