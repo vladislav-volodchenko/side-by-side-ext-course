@@ -29,6 +29,25 @@
           "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/",
           "destination": "demodestination"
         }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "riskmanager": {
+            "password": "initial",
+            "userAttributes": {
+              "email": "risk.manager@tester.sap.com"
+            },
+            "roles": ["RiskManager"]
+          },
+          "riskviewer": {
+            "password": "initial",
+            "userAttributes": {
+              "email": "risk.viewer@tester.sap.com"
+            },
+            "roles": ["RiskViewer"]
+          }
+        }
       }
     },
     "cov2ap" : {
