@@ -25,8 +25,7 @@
           "odataVersion": "4.0"
         }
       }
-    },
-    "ach": "a"
+    }
   },
   "sap.ui": {
     "technology": "UI5",

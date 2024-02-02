@@ -9,10 +9,14 @@
     "@cap-js-community/odata-v2-adapter": "^1.11.12",
     "@sap-cloud-sdk/http-client": "3.9.0",
     "@sap/cds": "^7",
-    "express": "^4"
+    "express": "^4",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
     "@sap/ux-specification": "^1.120.1"
   },
   "scripts": {
@@ -26,7 +30,6 @@
         "kind": "odata-v2",
         "model": "srv/external/API_BUSINESS_PARTNER",
         "credentials": {
-          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/",
           "destination": "demodestination"
         }
       },
@@ -38,20 +41,28 @@
             "userAttributes": {
               "email": "risk.manager@tester.sap.com"
             },
-            "roles": ["RiskManager"]
+            "roles": [
+              "RiskManager"
+            ]
           },
           "riskviewer": {
             "password": "initial",
             "userAttributes": {
               "email": "risk.viewer@tester.sap.com"
             },
-            "roles": ["RiskViewer"]
+            "roles": [
+              "RiskViewer"
+            ]
           }
         }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
       }
     },
-    "cov2ap" : {
-      "plugin" : true
+    "cov2ap": {
+      "plugin": true
     }
   },
   "sapux": [
